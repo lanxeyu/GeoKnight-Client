@@ -32,6 +32,7 @@ async function createUsername(e) {
     if (response.status == 201) {
         e.target.username.value = ''
         alert("username created")
+        location.reload()
     }
 
 }
