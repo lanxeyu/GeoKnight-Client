@@ -1,5 +1,5 @@
 body {
-    background-color: gold;
+    background-color: #00002B;
     display: flex;
     min-height: 100vh;
     align-items: center;
@@ -19,8 +19,6 @@ body {
 }
 
 .image {
-    /* background-image: url("./bg4.jpg");
-    background-repeat: no-repeat; */
     display: flex;
     justify-content: left;
     align-items: center;
@@ -34,7 +32,6 @@ body {
 }
 
 .btn {
-    /* background-color: lightskyblue; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,11 +48,9 @@ body {
     width: 100%;
     font-size: 80px;
     font-weight: bold;
-    
 }
 
 a {
-    /* background-color: lightblue; */
     color: white;
     font-size: 20px;
     margin-bottom: 130px;
