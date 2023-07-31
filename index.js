@@ -14,4 +14,29 @@ function displayScore() {
         })
 }
 
+async function createUsername(e) {
+    e.preventDefault()
+    
+    const data = {name: e.target.username.value}
+    const options = {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    }
+
+    const response = await fetch("http://localhost:3000/scoreboard/current-player", options)
+
+    
+    if (response.status == 201) {
+        e.target.username.value = ''
+        alert("username created")
+    }
+
+}
+
+const form = document.querySelector("#create-username");
+form.addEventListener("submit", createUsername);
+
 displayScore()
