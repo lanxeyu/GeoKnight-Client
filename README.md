@@ -1,1 +1,3 @@
-# GeoKnight-Client
+# GeoKnight-Client 
+
+Welcome to GeoKnight!
