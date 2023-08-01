@@ -4,6 +4,10 @@
     --letter-steps: 6;
 }
 
+.hide{
+    display: none;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -16,8 +20,22 @@ body{
 }
 
 img{
-    width: 100vw;
+    position: absolute;
+    left: -25px;
+    width: 110vw;
     height: 100vh;
+}
+
+.shake{
+    animation: horizontal-shake 0.3s forwards;
+}
+
+@keyframes horizontal-shake {
+    0%{transform:translateX(0)}
+    25%{transform:translateX(2px)}
+    50%{transform:translateX(-2px)}
+    75%{transform:translateX(2px)}
+    100%{transform:translateX(0)}
 }
 
 .char{
