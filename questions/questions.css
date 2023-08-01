@@ -25,23 +25,40 @@ body {
     #question {
         width: 60vw;
     }
+    #main {
+        background-color: var(--white);
+        padding: 200px 30px;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    #question {
+        width: 60vw;
+    }
+    #main {
+    background-color: var(--white);
+    padding: 40px 0;
+}
 }
 
 @media only screen and (max-width: 750px) {
     #question {
         width: 100%;
     }
+    #main {
+    background-color: var(--white);
+    padding: 0;
+}
 }
 
 #main, #side-section {
     text-align: center;
     justify-content: center;
     font-family: 'Space Mono', monospace;
+    position: relative;
 }
 
-#main {
-    background-color: var(--white);
-}
+
 
 
 h2 {
@@ -115,7 +132,7 @@ h2 {
 
 button {
     border: none;
-    transition: all 0.3s ease-in;
+    transition: all 0.1s ease-in;
     cursor: pointer;
 }
 
@@ -129,3 +146,10 @@ button:hover, #stats:hover {
     color: var(--white);
 }
 
+.close {
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    font-size: 2rem;
+    cursor: pointer;
+}
