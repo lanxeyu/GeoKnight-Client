@@ -20,6 +20,7 @@ img{
     height: 250px;
     position: absolute;
     bottom: 25%;
+    z-index: 5;
 }
 
 .player{
@@ -66,20 +67,20 @@ img{
     align-items: center;
     border-radius: 5px;
     border: black 2px solid;
-    z-index: 99;
 }
 
-.dmgstat::after{
+.dmgstat::before{
     content: "";
     width: 100px;
     height: 100px;
     position: absolute;
-    left: -28px;
-    bottom: -17px;
+    left: -39px;
+    bottom: -25px;
     transform: rotateZ(180deg);
     background-image: url("sword.png");
-    background-size: 80px 80px;
+    background-size: 100px 100px;
     background-repeat: no-repeat;
+    z-index: -1;
 }
 
 .enemy{
@@ -109,6 +110,7 @@ img{
     border-radius: 10px;
     box-shadow: 0 -15px 0 0 rgb(124, 173, 190) inset;
     outline: black 2px solid;
+    z-index: 20;
 }
 
 .fight-container>span{
@@ -120,7 +122,7 @@ img{
     align-items: center;
 }
 
-.button{
+#attack-btn{
     position: absolute;
     left: 50%;
     bottom: 4%;
@@ -143,7 +145,7 @@ img{
         height: 100px;
         bottom: 22%;
     }
-    .button{
+    #attack-btn{
         font-size: 2em;
         padding: 20px 25px;
     }
