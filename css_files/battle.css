@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16/9;
+    background-color: rgb(216, 230, 236);
+    letter-spacing: -1px;
+    font-family: 'Cinzel', serif;
+    overflow: hidden;
+}
+
+img{
+    width: 100vw;
+    height: 100vh;
+}
+
+.char{
+    width: 150px;
+    height: 250px;
+    position: absolute;
+    bottom: 25%;
+    z-index: 5;
+}
+
+.player{
+    left: 10%;
+    background-color: rgb(149, 125, 216);
+}
+
+.healthbar{
+    position: absolute;
+    top: -15%;
+    left: -5%;
+    width: 80%;
+    height: 10%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -5px 0 0 rgb(192, 0, 0) inset;
+    border-radius: 5px;
+    border: black 2px solid;
+}
+
+.healthbar::before{
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -15px;
+    display: inline-block;
+    background-image: url("https://opengameart.org/sites/default/files/heart%20pixel%20art%20254x254.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    
+}
+
+.dmgstat{
+    position: absolute;
+    top: -15%;
+    right: -5%;
+    width: 15%;
+    height: 10%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: black 2px solid;
+}
+
+.dmgstat::before{
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -39px;
+    bottom: -25px;
+    transform: rotateZ(180deg);
+    background-image: url("sword.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.enemy{
+    background-color: rgb(69, 248, 14);
+}
+
+#en0{
+    right: 35%;
+}
+
+#en1{
+    right: 20%;
+}
+
+#en2{
+    right: 5%;
+}
+
+.fight-container{
+    width: 50vw;
+    height: 140px;
+    background-color: rgb(155, 205, 223);
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: 0 -15px 0 0 rgb(124, 173, 190) inset;
+    outline: black 2px solid;
+    z-index: 20;
+}
+
+.fight-container>span{
+    margin: 20px;
+    line-height: 2rem;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#attack-btn{
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    font-size: 3em;
+    background: rgb(155, 205, 223);
+    padding: 30px 40px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 -15px 0 0 rgb(124, 173, 190) inset;
+    outline: black 2px solid;
+}
+
+@media only screen and (max-height:1000px), (max-width:1200px){
+    .char{
+        height: 200px;
+    }
+    
+    .fight-container{
+        height: 100px;
+        bottom: 22%;
+    }
+    #attack-btn{
+        font-size: 2em;
+        padding: 20px 25px;
+    }
+}
