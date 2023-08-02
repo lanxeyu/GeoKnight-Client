@@ -1,6 +1,3 @@
-
-
-
 const categories = document.querySelector('#categories')
 
 function displayChoices () {
@@ -28,5 +25,11 @@ function displayChoices () {
 }
 
 displayChoices()
+
+
+
+
+
+
 
 

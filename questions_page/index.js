@@ -1,0 +1,65 @@
+function displayEasyQuestion () {
+    const displayedquestion = document.querySelector('h3')
+    const option1 = document.querySelector('#option1')
+    const option2 = document.querySelector('#option2')
+    const option3 = document.querySelector('#option3')
+    const option4 = document.querySelector('#option4')
+    fetch ('http://localhost:3000/levels/easy/random')
+    .then (resp => resp.json())
+    .then (data => {
+        displayedquestion.textContent = data.question
+        option1.textContent = data.choice1
+        option2.textContent = data.choice2
+        option3.textContent = data.choice3
+        option4.textContent = data.choice4
+    })
+    .catch (err => {
+        console.log(err)
+    })
+}
+
+function displayMediumQuestion () {
+    const displayedquestion = document.querySelector('h3')
+    const option1 = document.querySelector('#option1')
+    const option2 = document.querySelector('#option2')
+    const option3 = document.querySelector('#option3')
+    const option4 = document.querySelector('#option4')
+    fetch ('http://localhost:3000/levels/medium/random')
+    .then (resp => resp.json())
+    .then (data => {
+        displayedquestion.textContent = data.question
+        option1.textContent = data.choice1
+        option2.textContent = data.choice2
+        option3.textContent = data.choice3
+        option4.textContent = data.choice4
+    })
+    .catch (err => {
+        console.log(err)
+    })
+}
+
+function displayHardQuestion () {
+    const displayedquestion = document.querySelector('h3')
+    const option1 = document.querySelector('#option1')
+    const option2 = document.querySelector('#option2')
+    const option3 = document.querySelector('#option3')
+    const option4 = document.querySelector('#option4')
+    fetch ('http://localhost:3000/levels/hard/random')
+    .then (resp => resp.json())
+    .then (data => {
+        displayedquestion.textContent = data.question
+        option1.textContent = data.choice1
+        option2.textContent = data.choice2
+        option3.textContent = data.choice3
+        option4.textContent = data.choice4
+    })
+    .catch (err => {
+        console.log(err)
+    })
+}
+
+// displayHardQuestion ()
+// displayMediumQuestion()
+displayEasyQuestion()
+
+module.exports = { displayEasyQuestion };
