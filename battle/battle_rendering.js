@@ -1,5 +1,5 @@
 import {getObject} from "./battle_logic.js";
-import { enemyArray } from "./battle.js";
+import {enemyArray,player} from "./battle.js";
 
 function renderEnemy(len){
     // add id to enemy
