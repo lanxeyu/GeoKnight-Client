@@ -12,10 +12,29 @@ function displayEasyQuestion () {
         option2.textContent = data.choice2
         option3.textContent = data.choice3
         option4.textContent = data.choice4
+
+        option1.addEventListener("click", () => checkAnswer(data.correctChoice, "choice1"))
+        option2.addEventListener("click", () => checkAnswer(data.correctChoice, "choice2"))
+        option3.addEventListener("click", () => checkAnswer(data.correctChoice, "choice3"))
+        option4.addEventListener("click", () => checkAnswer(data.correctChoice, "choice4"))
     })
     .catch (err => {
         console.log(err)
     })
 }
 
-displayEasyQuestion()
+function checkAnswer(correctAnswer, selectedAnswer) {
+    if (correctAnswer === selectedAnswer) {
+        window.alert('Correct!')
+    } else {
+        window.alert('Wrong Answer!')
+    }
+}
+
+const submitBtn = document.querySelector('#submit-btn')
+    submitBtn.addEventListener("click", (event) => {
+        event.preventDefault()
+        window.location.href = "../choice_page/categories.html"
+    })
+
+displayEasyQuestion();
