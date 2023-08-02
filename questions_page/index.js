@@ -16,7 +16,6 @@ function displayEasyQuestion () {
     .catch (err => {
         console.log(err)
     })
-
 }
 
 function displayMediumQuestion () {
@@ -61,6 +60,6 @@ function displayHardQuestion () {
 
 // displayHardQuestion ()
 // displayMediumQuestion()
-// displayEasyQuestion()
+displayEasyQuestion()
 
-
+module.exports = { displayEasyQuestion };
