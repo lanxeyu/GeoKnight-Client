@@ -8,9 +8,11 @@
     <script type="module" src="./battle_logic.js"></script>
     <script type="module" src="./battle_rendering.js"></script>
     <script type="script" src="./battle.js"></script>
+    <script defer src="./animation.js"></script>
 </head>
 <body>
-    <img id="background" src="https://img.freepik.com/free-vector/autumn-landscape-background_1012-302.jpg?w=1380&t=st=1690816257~exp=1690816857~hmac=f0e82e3d43b924189a0872e79315eb4b440eabdcaead19f2bdec5d4288077009" alt="BACKGROUND">
+    <!-- Removed static background but enemy shifting logic gets broken if line below is removed. Dynamic background is now in CSS. -->
+    <img id="background" src=""> 
     <div class="char player" id="player">
         <span>PLAYER</span>
         <div class="healthbar"><span>0</span></div>

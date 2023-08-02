@@ -13,18 +13,23 @@ body{
     padding: 0;
     aspect-ratio: 16/9;
     background-color: rgb(216, 230, 236);
+    background-image: url('./background.png');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'Cinzel', serif;
     letter-spacing: 2px;
     overflow: hidden;
     user-select: none;
 }
 
-img{
+/* img{
     position: absolute;
     left: -25px;
     width: 110vw;
     height: 100vh;
-}
+} */
 
 .shake{
     animation: horizontal-shake 0.3s forwards;
@@ -38,10 +43,10 @@ img{
     z-index: 5;
 }
 
-.player{
+/* .player{
     left: 10%;
     background-color: rgb(149, 125, 216);
-}
+} */
 
 .healthbar{
     position: absolute;
@@ -113,7 +118,7 @@ img{
     z-index: -1;
 }
 
-.enemy{
+/* .enemy{
     background-color: rgb(69, 248, 14);
 }
 
@@ -127,7 +132,7 @@ img{
 
 #en2{
     right: 5%;
-}
+} */
 
 .fight-container{
     display: inline-block;
@@ -241,3 +246,90 @@ img{
         padding: 20px 25px;
     }
 } */
+
+/* Lanxe - Animations for id = player */
+#player {
+    left: 35%;
+    bottom: 30%;
+    width: 192px;
+    height: 192px;
+    background-image: url('./knight_idle_sheet.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: playerIdle 0.5s steps(6) infinite; /* Apply the idle animation */
+}
+    
+#player.attack {
+    background-image: url('./knight_attack_sheet.png');
+    animation: playerAttack 0.2s steps(4) 1; /* Apply the attack animation */
+}
+    
+@keyframes playerIdle {
+    0% { background-position: 0 0; }
+    100% { background-position: -1152px 0; }
+}
+    
+@keyframes playerAttack {
+    0% { background-position: 0 0; }
+    100% { background-position: -768px 0; }
+}
+
+/* Lanxe - Animations for class = enemy */
+#en0 {
+    right: 35%;
+    bottom: 30%;
+    width: 192px;
+    height: 192px;
+    background-image: url('./enemy_idle_sheet.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: enemyIdle 0.5s steps(6) infinite; /* Apply the idle animation */
+}
+
+#en1 {
+    right: 20%;
+    bottom: 30%;
+    width: 192px;
+    height: 192px;
+    background-image: url('./enemy_idle_sheet.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: enemyIdle 0.5s steps(6) infinite; /* Apply the idle animation */
+}
+
+#en2 {
+    right: 5%;
+    bottom: 30%;
+    width: 192px;
+    height: 192px;
+    background-image: url('./enemy_idle_sheet.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: enemyIdle 0.5s steps(6) infinite; /* Apply the idle animation */
+}
+    
+#en0.attack {
+    background-image: url('./enemy_attack_sheet.png');
+    animation: enemyAttack 0.2s steps(4) 1; /* Apply the attack animation */
+}
+
+#en1.attack {
+    background-image: url('./enemy_attack_sheet.png');
+    animation: enemyAttack 0.2s steps(4) 1; /* Apply the attack animation */
+}
+
+#en2.attack {
+    background-image: url('./enemy_attack_sheet.png');
+    animation: enemyAttack 0.2s steps(4) 1; /* Apply the attack animation */
+}
+    
+@keyframes enemyIdle {
+    0% { background-position: 0 0; }
+    100% { background-position: -1152px 0; }
+}
+    
+@keyframes enemyAttack {
+    0% { background-position: 0 0; }
+    100% { background-position: -768px 0; }
+}
+
