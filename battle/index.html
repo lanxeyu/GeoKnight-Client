@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeoKnight</title>
     <link rel="stylesheet" href="./css_files/battle.css">
-    <script defer src="../server/battle.js"></script>
+    <script type="module" src="./battle_logic.js"></script>
+    <script type="module" src="./battle_rendering.js"></script>
+    <script type="script" src="./battle.js"></script>
 </head>
 <body>
     <img id="background" src="https://img.freepik.com/free-vector/autumn-landscape-background_1012-302.jpg?w=1380&t=st=1690816257~exp=1690816857~hmac=f0e82e3d43b924189a0872e79315eb4b440eabdcaead19f2bdec5d4288077009" alt="BACKGROUND">
     <div class="char player" id="player">
         <span>PLAYER</span>
-        <div class="healthbar"></div>
+        <div class="healthbar"><span>0</span></div>
         <div class="dmgstat">0</div>
     </div>
     <!-- ENEMIES IN-LINE WITH ELEMENTS HERE -->
