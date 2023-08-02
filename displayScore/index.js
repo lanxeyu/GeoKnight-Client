@@ -1,4 +1,3 @@
-
 // display username
 
 function displayScore() {
