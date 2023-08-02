@@ -1,3 +1,5 @@
 # GeoKnight-Client 
 
-Welcome to GeoKnight!
+- choice_page & home_page are pulled from dev.rubina
+
+Welcome to GeoKnight! 
