@@ -12,16 +12,22 @@ function displayEasyQuestion () {
         option2.textContent = data.choice2
         option3.textContent = data.choice3
         option4.textContent = data.choice4
+        function checkAnswer(correctAnswer, selectedAnswer) {
+            if (correctAnswer === selectedAnswer) {
+                window.alert('Correct!')
+            } else {
+                window.alert('Wrong Answer!')
+            }
+        }
     })
     .catch (err => {
         console.log(err)
     })
-    const submitBtn = document.querySelector('#submit-btn')
+}
+
+const submitBtn = document.querySelector('#submit-btn')
     submitBtn.addEventListener("click", (event) => {
         event.preventDefault()
         window.location.href = "../choice_page/categories.html"
-        
     })
-}
-
-displayEasyQuestion()
+displayEasyQuestion();

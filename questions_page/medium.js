@@ -13,7 +13,7 @@ function displayMediumQuestion () {
         option3.textContent = data.choice3
         option4.textContent = data.choice4
     })
-    .catch (err => {
+    .catch (err => { 
         console.log(err)
     })
     const submitBtn = document.querySelector('#submit-btn')

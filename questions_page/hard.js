@@ -14,7 +14,7 @@ function displayHardQuestion () {
         option4.textContent = data.choice4
     })
     .catch (err => {
-        console.log(err)
+        console.log(err) 
     })
     const submitBtn = document.querySelector('#submit-btn')
     submitBtn.addEventListener("click", (event) => {
