@@ -1,3 +1,6 @@
+let selectedAnswer = null;
+let questionData = null; 
+
 function displayEasyQuestion () {
     const displayedquestion = document.querySelector('h3')
     const option1 = document.querySelector('#option1')
@@ -7,16 +10,17 @@ function displayEasyQuestion () {
     fetch ('http://localhost:3000/levels/easy/random')
     .then (resp => resp.json())
     .then (data => {
-        displayedquestion.textContent = data.question
-        option1.textContent = data.choice1
-        option2.textContent = data.choice2
-        option3.textContent = data.choice3
-        option4.textContent = data.choice4
+        questionData = data;
+        displayedquestion.textContent = questionData.question
+        option1.textContent = questionData.choice1
+        option2.textContent = questionData.choice2
+        option3.textContent = questionData.choice3
+        option4.textContent = questionData.choice4
 
-        option1.addEventListener("click", () => checkAnswer(data.correctChoice, "choice1"))
-        option2.addEventListener("click", () => checkAnswer(data.correctChoice, "choice2"))
-        option3.addEventListener("click", () => checkAnswer(data.correctChoice, "choice3"))
-        option4.addEventListener("click", () => checkAnswer(data.correctChoice, "choice4"))
+        option1.addEventListener("click", () => selectedAnswer = "choice1")
+        option2.addEventListener("click", () => selectedAnswer = "choice2")
+        option3.addEventListener("click", () => selectedAnswer = "choice3")
+        option4.addEventListener("click", () => selectedAnswer = "choice4")
     })
     .catch (err => {
         console.log(err)
@@ -24,17 +28,28 @@ function displayEasyQuestion () {
 }
 
 function checkAnswer(correctAnswer, selectedAnswer) {
-    if (correctAnswer === selectedAnswer) {
-        window.alert('Correct!')
-    } else {
-        window.alert('Wrong Answer!')
-    }
+    return correctAnswer === selectedAnswer;
 }
 
-const submitBtn = document.querySelector('#submit-btn')
-    submitBtn.addEventListener("click", (event) => {
-        event.preventDefault()
-        window.location.href = "../choice_page/categories.html"
-    })
+const submitBtn = document.querySelector('#submit-btn');
+submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (selectedAnswer) {
+        if (questionData) {
+            let correctAnswer = questionData.correctChoice;
+            let isCorrect = checkAnswer(correctAnswer, selectedAnswer); 
+            if (isCorrect) {
+                window.alert('Correct!');
+            } else {
+                window.alert('Wrong answer!');
+            }
+        } else {
+            console.log('Question data not available.');
+        }
+    } else {
+        window.alert('Please select an answer before submitting.');
+    }
+    window.location.href = "../choice_page/categories.html";
+});
 
 displayEasyQuestion();
