@@ -9,7 +9,7 @@ function displayEasy () {
         const easyChoice = document.querySelector("#easyChoice")
         easyChoice.addEventListener("click", (event) => {
             event.preventDefault()
-            window.location.href = "../questions_page/questions.html"
+            window.location.href = "../questions_page/easy_questions.html"
             
         })
     })
@@ -24,7 +24,7 @@ function displayMedium() {
         const medChoice = document.querySelector("#medChoice")
         medChoice.addEventListener("click", (event) => {
             event.preventDefault()
-            window.location.href = "../questions_page/questions.html"
+            window.location.href = "../questions_page/med_questions.html"
             
         })
     })
@@ -40,7 +40,7 @@ function displayHard() {
         const hardChoice = document.querySelector("#hardChoice")
         hardChoice.addEventListener("click", (event) => {
             event.preventDefault()
-            window.location.href = "../questions_page/questions.html"
+            window.location.href = "../questions_page/hard_questions.html"
             
         })
     })
