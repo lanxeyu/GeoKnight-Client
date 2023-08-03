@@ -35,7 +35,15 @@ async function createUsername(e) {
 
 }
 
+document.getElementById("homepage").addEventListener("click", () => {
+    window.location.href = "../index.html";
+})
+
 const form = document.querySelector("#create-username");
 form.addEventListener("submit", createUsername);
+
+const h3 = document.getElementById("scoreID");
+
+h3.textContent = sessionStorage.getItem("score");
 
 displayScore()

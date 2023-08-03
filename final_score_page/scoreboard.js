@@ -1,11 +1,11 @@
-// import { createPlayerInStorage } from "../player.js";
+ import { createPlayerInStorage } from "../player.js";
 
-// const subBtn = document.getElementById("submit");
-// const h3 = document.getElementById("scoreID");
+ const subBtn = document.getElementById("submit");
+ const h3 = document.getElementById("scoreID");
 
-// h3.textContent = sessionStorage.getItem("score");
+ h3.textContent = sessionStorage.getItem("score");
 
-// subBtn.addEventListener("click", () => {
-//     createPlayerInStorage()
-//     window.location.href = "../index.html";
-// })
+ subBtn.addEventListener("click", () => {
+     createPlayerInStorage()
+     window.location.href = "../index.html";
+ })
