@@ -64,8 +64,8 @@ export {Enemy,enemyArray,playerElement,player};
 
 function adjustDifficulty() {
     enemyCount = 1 + Math.floor(battleCounter * 0.5);
-    enemyMaxHPMidpoint = 4 + Math.floor(battleCounter * 1.4);
-    enemyAttackMidpoint = 2 + Math.floor(battleCounter * 1.3);
+    enemyMaxHPMidpoint = 4 + Math.floor(battleCounter * 1.2);
+    enemyAttackMidpoint = 2 + Math.floor(battleCounter * 1.1);
 }
 
 function initBattlePhase() {
