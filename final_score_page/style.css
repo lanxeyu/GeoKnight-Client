@@ -1,0 +1,90 @@
+:root {
+    --primary-bg: #05041c; 
+    --main-btn: #E37100; 
+    --secondary-btn: #31A5D3; 
+    --tertiary-btn: #24A894;
+    --hover: #ffe367; 
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-bg);
+    height: 100vh;
+    width: 70%;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#score {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    height: 50%;
+    align-items: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+    height: 50%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.graphics {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg);
+    height: 100vh;
+    width: 40%;
+}
+
+img {
+    width: 600px;
+    margin-left: 200px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 0;
+    color: white;
+}
+
+h3 {
+    font-size: 30px;
+    color: white;
+}
+
+#name {
+    width: 25rem;   
+    height: 3.9rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    margin-top: 25px;
+    border: none;
+}
+
+#submit {
+    height: 4rem;
+    width: 12rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    background-color: var(--main-btn);
+    border: none;
+    margin-left: 10px;
+}
+
+#submit:hover {
+    background-color: var(--hover);
+}

@@ -8,7 +8,6 @@
 
 body {
     background-color: var(--primary-bg);
-    display: flex;;
     display: flex;
     min-height: 100vh;
     align-items: center;
@@ -102,4 +101,3 @@ button:hover {
     width: 40rem;
     margin-top: 120px;
 }
-
