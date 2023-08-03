@@ -12,7 +12,7 @@ import {renderHPStat,
     runDeathAnimation} from "./battle_rendering.js";
 
 // Initialize difficulty scalers
-let battleCounter = 1;
+let battleCounter = 0;
 let enemyCount = 1;
 
 // Initialize score
@@ -23,7 +23,7 @@ const playerElement = document.getElementById("player");
 const player = {
     maxHP: 10,
     currHP: 10,
-    attack: 2,
+    attack: 5,
     name: "player",
     
     displayStats() {

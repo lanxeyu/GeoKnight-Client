@@ -23,4 +23,3 @@ function onAnimationEnd() {
     playerAnimate.classList.remove('attack'); // Remove the 'attack' class to go back to the idle animation
     enemyAnimate.classList.remove('attack');
 }
-
