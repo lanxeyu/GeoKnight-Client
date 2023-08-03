@@ -42,8 +42,6 @@ function updateStat(stat,increment){
         if(Number(sessionStorage.getItem("maxHP")) < playerStat){
             playerStat = sessionStorage.getItem("maxHP");
         }
-    }else if(stat === "maxHP"){
-        sessionStorage.setItem("currHP",playerStat);
     }
     sessionStorage.setItem(stat,playerStat);
 }
