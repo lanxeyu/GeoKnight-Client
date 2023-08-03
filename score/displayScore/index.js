@@ -2,7 +2,7 @@
 // display username
 
 function displayScore() {
-    fetch("http://localhost:3000/scoreboard/current-player")
+    fetch("https://geoknightbackend.onrender.com/scoreboard/current-player")
         .then(resp => resp.json())
         .then(data => {
             const scoreboard = data
@@ -26,7 +26,7 @@ async function createUsername(e) {
         body: JSON.stringify(data)
     }
 
-    const response = await fetch("http://localhost:3000/scoreboard/current-player", options)
+    const response = await fetch("https://geoknightbackend.onrender.com/scoreboard/current-player", options)
 
     
     if (response.status == 201) {
