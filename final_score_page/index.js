@@ -36,5 +36,4 @@ async function createUsername(e) {
 
 const form = document.querySelector("#create-username");
 form.addEventListener("submit", createUsername);
-
-displayScore()
+form.addEventListener("submit",displayScore)
