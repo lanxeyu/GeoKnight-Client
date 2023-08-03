@@ -1,0 +1,1 @@
+console.error("Error: Can't walk dependency graph: Cannot find module '/home/rubinakumari/LFA/lap1/geoknight/client/index.js' from '/home/rubinakumari/LFA/lap1/geoknight/client/_fake.js'\n    required by /home/rubinakumari/LFA/lap1/geoknight/client/_fake.js");
