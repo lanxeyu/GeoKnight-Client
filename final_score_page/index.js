@@ -2,6 +2,7 @@ function displayScore() {
     fetch("https://geoknightbackend.onrender.com/scoreboard/current-player")
         .then(resp => resp.json())
         .then(data => {
+            console.log("doing")
             const scoreboard = data
             const usernameElement = document.querySelector('#current-player')
             const scoreElement = document.querySelector('#score')
@@ -36,4 +37,5 @@ async function createUsername(e) {
 
 const form = document.querySelector("#create-username");
 form.addEventListener("submit", createUsername);
-form.addEventListener("submit",displayScore)
+
+displayScore()
