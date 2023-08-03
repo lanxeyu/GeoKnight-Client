@@ -1,6 +1,8 @@
 let selectedAnswer = null;
 let questionData = null; 
 
+console.log(player.maxHP)
+
 function displayEasyQuestion () {
     const displayedquestion = document.querySelector('h3')
     const option1 = document.querySelector('#option1')
@@ -40,6 +42,9 @@ submitBtn.addEventListener("click", (event) => {
             let isCorrect = checkAnswer(correctAnswer, selectedAnswer); 
             if (isCorrect) {
                 window.alert('Correct!');
+                // Player stat change
+                player.maxHP += 4;
+                player.currHP += 4;
             } else {
                 window.alert('Wrong answer!');
             }
