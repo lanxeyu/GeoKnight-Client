@@ -59,21 +59,19 @@ a {
 #start {
     background-color: #C62E00;
     margin-bottom: 30px;
-}
-
-#start:hover{
-    filter: brightness(0.8);
     cursor: pointer;
 }
 
 #scoreboard {
     background-color: #E37100;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 #credits {
     background-color: #295500;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 button {
@@ -90,4 +88,3 @@ button {
 .logo {
     width: 20rem;
 }
-

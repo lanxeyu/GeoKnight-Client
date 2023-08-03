@@ -1,3 +1,6 @@
+import { createPlayerInStorage } from "./player.js";
+
 document.getElementById("start").addEventListener("click",() => {
-    location.href = "./battle/index.html";
+    createPlayerInStorage();
+    location.href = "./choice_page/categories.html";
 })

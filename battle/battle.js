@@ -13,7 +13,7 @@ import {renderHPStat,
     runEndFadeAnimation} from "./battle_rendering.js";
 
 // Initialize difficulty scalers
-let battleCounter = 5;
+let battleCounter = 1;
 let enemyCount = 1;
 
 // Initialize score
@@ -22,9 +22,9 @@ let score = 0;
 // Initialize player object
 const playerElement = document.getElementById("player");
 const player = {
-    maxHP: 100,
-    currHP: 100,
-    attack: 2,
+    maxHP: sessionStorage.getItem("maxHP"),
+    currHP: sessionStorage.getItem("currHP"),
+    attack: sessionStorage.getItem("attack"),
     name: "player",
     
     displayStats() {
