@@ -73,19 +73,19 @@ a {
     font-family: 'Roboto Mono', monospace;
 }
 
-.start {
+#start {
     background-color: var(--main-btn);
     box-shadow: 0 -5px 0 0 var(--dark-orange) inset;
     margin-bottom: 30px;
 }
 
-.scoreboard {
+#scoreboard {
     background-color: var(--secondary-btn);
     box-shadow: 0 -5px 0 0 #266b86 inset;
     margin-bottom: 30px;
 }
 
-.credits {
+#credits {
     background-color: var(--tertiary-btn);
     box-shadow: 0 -5px 0 0 #1e6358 inset;
     margin-bottom: 30px;
