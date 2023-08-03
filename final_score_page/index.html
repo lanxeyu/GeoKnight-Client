@@ -19,18 +19,17 @@
     </section>
 
     <main>
-        <div id="score">
+        <div id="scoreContainer">
+            <h1 id="current-player"></h1>
             <h2>Final Score</h2>
             <h3 id="scoreID">0</h3>
         </div>
         <div id="form">
-            <h2>Your Name</h2>
-            <div class="submitdiv">
-                <form>
-                    <input type="text" id="name" name="name" placeholder="Enter your name here"> 
-                </form>
-                <button id="submit" value="Submit">Submit</button>
-            </div>
+            <h2>Please create a username</h2>
+            <form id="create-username">
+                <input id="username_input"type="text" name="username" placeholder="username">
+                <input id="submit" type="submit" value="create">
+            </form>
         </div>
     </main>
 
