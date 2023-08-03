@@ -3,6 +3,10 @@
     --yellow-shadow: #f0c740;
     --green: #295500;
     --blue: #00002b;
+    --secondary-btn: #31A5D3;
+    --blue-shadow: #266b86;
+    --tertiary-btn: #24A894;
+    --green-shadow: #1e6358;
     --orange: #e37100;
     --dark-orange: #c62e00;
     --white: rgb(244, 240, 231);
@@ -141,6 +145,7 @@ button {
     border: none;
     transition: all 0.1s ease-in;
     cursor: pointer;
+    outline: solid black 2px;
 }
 
 button:hover, #stats:hover {
@@ -151,6 +156,7 @@ button:hover, #stats:hover {
 
 button:focus {
     background-color: var(--yellow);
+    box-shadow: 0 -5px 0 0 var(--yellow-shadow) inset;
     color: black;
 }
 
@@ -172,26 +178,41 @@ button:focus {
 #hp-disp-grp {
     margin-top: 100px;
     padding: 10px 25px;
-    background-color: var(--orange);
+    background-color: var(--secondary-btn);
     border-radius: 5px;
-    box-shadow: 0 -5px 0 0 var(--dark-orange) inset;
+    box-shadow: 0 -5px 0 0 var(--blue-shadow) inset;
+    outline: solid black 2px;
 
 }
 
 #atk-disp-grp {
     margin-top: 50px;
     padding: 10px 25px;
-    background-color: var(--orange);
+    background-color: var(--secondary-btn);
     border-radius: 5px;
-    box-shadow: 0 -5px 0 0 var(--dark-orange) inset;
+    box-shadow: 0 -5px 0 0 var(--blue-shadow) inset;
+    outline: solid black 2px;
 }
 
+#submit-btn{
+    padding: 10px 30px;
+    background-color: var(--tertiary-btn);
+    box-shadow: 0 -5px 0 0 var(--green-shadow) inset;
+    border-radius: 10px;
+    color: white;
+}
+
+#submit-btn:hover{
+    color: black;
+    background-color: var(--yellow);
+    box-shadow: 0 -5px 0 0 var(--yellow-shadow) inset;
+}
 
 /* Player Animation */
 
 #player {
     align-items: center;
-    bottom: 30%;
+    bottom: 20%;
     width: 768px;
     height: 768px;
     background-image: url('../battle/css_files/knight_idle_sheet.png');
