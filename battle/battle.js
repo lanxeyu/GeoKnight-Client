@@ -10,10 +10,13 @@ import {renderHPStat,
     runTypeAnimation,
     runShakeAnimation,
     runDeathAnimation,
-    runEndFadeAnimation} from "./battle_rendering.js";
+    runEndFadeAnimation,
+    renderScore} from "./battle_rendering.js";
+
+import {addToScore} from "../player.js";
 
 // Initialize difficulty scalers
-let battleCounter = 1;
+let battleCounter = Number(sessionStorage.getItem("difficulty"));
 let enemyCount = 1;
 
 // Initialize score
@@ -61,8 +64,8 @@ export {Enemy,enemyArray,playerElement,player};
 
 function adjustDifficulty() {
     enemyCount = 1 + Math.floor(battleCounter * 0.5);
-    enemyMaxHPMidpoint = 4 + Math.floor(battleCounter * 1.7);
-    enemyAttackMidpoint = 2 + Math.floor(battleCounter * 1.4);
+    enemyMaxHPMidpoint = 4 + Math.floor(battleCounter * 1.4);
+    enemyAttackMidpoint = 2 + Math.floor(battleCounter * 1.3);
 }
 
 function initBattlePhase() {
@@ -88,23 +91,25 @@ document.getElementById("attack-btn").addEventListener("click", () => {
 
     if (checkZeroHP(player)) {
         // player = null;
+        console.log(sessionStorage.getItem("score"))
         runDeathAnimation(playerElement)
         setTimeout(function() {runTypeAnimation("GeoKnight has, uh, fainted! Indefinitely!")},1200);
-        setTimeout(function() {runEndFadeAnimation("../score/displayScore/displayScore.html")},4000);
-        // INSERT HERE: Go to "Lose/Score Display/Enter Your Name" screen
-
+        setTimeout(function() {runEndFadeAnimation("../final_score_page/index.html")},4000);
 
     } else if (checkZeroHP(enemyArray[0])) {
         // Remove enemy object from the enemyArray
         destroyEnemyElement();
         runShakeAnimation();
+        addToScore();
+        renderScore();
         enemyArray.shift();
         setTimeout(function() {runTypeAnimation("GeoKnight defeated an enemy!")},1200);
         updateEnemyID();
     }
         // If there are no more enemies
     if (enemyArray.length <= 0) {
-        // INSERT HERE: Successful defense message. Then go to Fixing phase.
+        addToScore();
+        sessionStorage.setItem("currHP",Number(sessionStorage.getItem("maxHP")));
         setTimeout(function() {runTypeAnimation("GeoKnight has defeated the enemies!")},1200);
         setTimeout(function() {runEndFadeAnimation("../choice_page/categories.html")},4000);
     }
@@ -118,6 +123,7 @@ addEventListener("load",(event) => {
         transitionElement.classList.remove("hidden");
         transitionElement.style.display = "none";
     })
+    renderScore();
 })
 
 initBattlePhase();

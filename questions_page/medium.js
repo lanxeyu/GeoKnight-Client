@@ -1,4 +1,4 @@
-import { updateLoop, resetLoop} from "../player.js";
+import { updateLoop, resetLoop,increaseDifficulty,addToScore,updateStat} from "../player.js";
 
 let selectedAnswer = null;
 let questionData = null; 
@@ -42,6 +42,8 @@ submitBtn.addEventListener("click", (event) => {
             let correctAnswer = questionData.correctChoice;
             let isCorrect = checkAnswer(correctAnswer, selectedAnswer); 
             if (isCorrect) {
+                addToScore()
+                updateStat("maxHP",4);
                 window.alert('Correct!');
             } else {
                 window.alert('Wrong answer!');
@@ -54,6 +56,7 @@ submitBtn.addEventListener("click", (event) => {
     }
     if(sessionStorage.getItem("loop") == 3){
         resetLoop();
+        increaseDifficulty();
         window.location.href = "../battle/index.html";
     }else{
         window.location.href = "../choice_page/categories.html";

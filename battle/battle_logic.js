@@ -20,7 +20,7 @@ function getRandomInt(midpoint,range) {
 
 function resolveAttack(player, enemy) {
     player.currHP -= enemy.attack
-    let playerATK = player.attack + (getRandomInt(player.attack,1))
+    let playerATK = Number(player.attack) + (getRandomInt(1,1))
     enemy.currHP -= playerATK
 
     runHitAnimation(playerElement)

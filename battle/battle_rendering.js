@@ -131,6 +131,11 @@ function runEndFadeAnimation(next_page_dir){
     })
 }
 
+function renderScore(){
+    const scoreLabel = document.getElementById("score");
+    scoreLabel.textContent = Number(sessionStorage.getItem("score"));
+}
+
 export {renderEnemy,
     renderHPStat,
     renderPlayerAttack,
@@ -140,4 +145,5 @@ export {renderEnemy,
     runShakeAnimation,
     runDeathAnimation,
     runHitAnimation,
-    runEndFadeAnimation};
+    runEndFadeAnimation,
+    renderScore};
