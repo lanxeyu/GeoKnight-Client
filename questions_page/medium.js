@@ -55,12 +55,16 @@ submitBtn.addEventListener("click", (event) => {
     } else {
         window.alert('Please select an answer before submitting.');
     }
-    if(sessionStorage.getItem("loop") == 3){
-        resetLoop();
-        increaseDifficulty();
-        window.location.href = "../battle/index.html";
-    }else{
-        window.location.href = "../choice_page/categories.html";
+
+    if (selectedAnswer) {
+        // Proceed to next page (battle or categories)
+        if(sessionStorage.getItem("loop") == 3){
+            resetLoop();
+            increaseDifficulty();
+            window.location.href = "../battle/index.html";
+        }else{
+            window.location.href = "../choice_page/categories.html";
+        }
     }
 });
 
