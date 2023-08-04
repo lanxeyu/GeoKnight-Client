@@ -1,5 +1,6 @@
 import {renderEnemy,runHitAnimation,runTypeAnimation} from "./battle_rendering.js";
 import {Enemy,enemyArray,playerElement} from "./battle.js";
+import { resolvePlayerStat } from "../player.js";
 
 function createEnemy(maxHP, attack) {
     let len = enemyArray.length;
@@ -22,7 +23,7 @@ function resolveAttack(player, enemy) {
     player.currHP -= enemy.attack
     let playerATK = Number(player.attack) + (getRandomInt(1,1))
     enemy.currHP -= playerATK
-
+    resolvePlayerStat("currHP",player.currHP)
     runHitAnimation(playerElement)
     runHitAnimation(document.getElementById("en0"))
     runTypeAnimation(`GeoKnight dealt ${playerATK} damage to the enemy.`);
