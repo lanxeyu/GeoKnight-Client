@@ -11,8 +11,10 @@
     --primary-bg: #05041c; 
     --main-btn: #E37100; 
     --dark-orange: #c62e00;
-    --secondary-btn: #31A5D3; 
+    --secondary-btn: #31A5D3;
+    --blue-shadow: #266b86;
     --tertiary-btn: #24A894;
+    --green-shadow: #1e6358;
     --hover: #ffe367; 
     --yellow-shadow: #f0c740;
 }
@@ -169,8 +171,6 @@ li {
     justify-content:center;
     align-items: top;
     flex-direction: column;
-    width: 35%;
-    height: 100vh;
 }
 
 #text {
@@ -195,6 +195,37 @@ li {
     /* background-color: #ffe367; */
 
     animation: playerIdle 0.5s steps(6) infinite; /* Apply the idle animation */
+}
+
+#stats-disp{
+    color: var(--white);
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#hp-disp-grp {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    margin-top: 100px;
+    padding: 10px 25px;
+    background-color: var(--secondary-btn);
+    border-radius: 5px;
+    box-shadow: 0 -5px 0 0 var(--blue-shadow) inset;
+    outline: solid black 2px;
+    text-align: center;
+
+}
+
+#atk-disp-grp {
+    width: 100px;
+    margin-top: 50px;
+    padding: 10px 25px;
+    background-color: var(--secondary-btn);
+    border-radius: 5px;
+    box-shadow: 0 -5px 0 0 var(--blue-shadow) inset;
+    outline: solid black 2px;
+    text-align: center;
 }
 
 @keyframes playerIdle {
