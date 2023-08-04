@@ -46,7 +46,7 @@ function updateStat(stat,increment){
         //increasing maxhp
         playerStat = Number(sessionStorage.getItem(stat))+increment;
         //increasing currhp
-        sessionStorage.setItem("currHP",Number(sessionStorage.getItem("currHP"))+increment)
+        sessionStorage.setItem("currHP",Number(sessionStorage.getItem("currHP"))+4)
     }
 
     sessionStorage.setItem(stat,playerStat);
