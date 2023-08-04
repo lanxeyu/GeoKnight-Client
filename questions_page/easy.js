@@ -44,24 +44,27 @@ submitBtn.addEventListener("click", (event) => {
             if (isCorrect) {
                 // let option = `#option${selectedAnswer.slice(-1)}`;
                 // button = document.getElementById(option);
-                window.alert('Correct!');
                 addToScore();
+                window.alert('Correct!');
                 updateStat("currHP",8);
             } else {
                 window.alert('Wrong answer!');
             }
+
+            // Proceed to next page (battle or categories)
+            if(sessionStorage.getItem("loop") == 3){
+                resetLoop();
+                increaseDifficulty();
+                window.location.href = "../battle/index.html";
+            }else{
+                window.location.href = "../choice_page/categories.html";
+            }
+
         } else {
             console.log('Question data not available.');
         }
     } else {
         window.alert('Please select an answer before submitting.');
-    }
-    if(sessionStorage.getItem("loop") == 3){
-        resetLoop();
-        increaseDifficulty();
-        window.location.href = "../battle/index.html";
-    }else{
-        window.location.href = "../choice_page/categories.html";
     }
 });
 

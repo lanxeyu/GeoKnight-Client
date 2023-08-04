@@ -44,23 +44,27 @@ submitBtn.addEventListener("click", (event) => {
             if (isCorrect) {
                 addToScore()
                 updateStat("maxHP",4);
+                updateStat("currHP",4);
                 window.alert('Correct!');
             } else {
                 window.alert('Wrong answer!');
             }
+
+            if(sessionStorage.getItem("loop") == 3){
+                resetLoop();
+                increaseDifficulty();
+                window.location.href = "../battle/index.html";
+            }else{
+                window.location.href = "../choice_page/categories.html";
+            }
+
         } else {
             console.log('Question data not available.');
         }
     } else {
         window.alert('Please select an answer before submitting.');
     }
-    if(sessionStorage.getItem("loop") == 3){
-        resetLoop();
-        increaseDifficulty();
-        window.location.href = "../battle/index.html";
-    }else{
-        window.location.href = "../choice_page/categories.html";
-    }
+    
 });
 
 displayMediumQuestion();
