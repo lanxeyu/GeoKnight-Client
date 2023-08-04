@@ -161,7 +161,9 @@ button:focus {
 }
 
 #hp-disp-grp {
-    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
     margin-top: 100px;
     padding: 10px 25px;
     background-color: var(--secondary-btn);
@@ -173,7 +175,9 @@ button:focus {
 }
 
 #atk-disp-grp {
-    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
     margin-top: 50px;
     padding: 10px 25px;
     background-color: var(--secondary-btn);
