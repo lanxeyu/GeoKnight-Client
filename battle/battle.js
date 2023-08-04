@@ -109,7 +109,6 @@ document.getElementById("attack-btn").addEventListener("click", () => {
         // If there are no more enemies
     if (enemyArray.length <= 0) {
         addToScore();
-        sessionStorage.setItem("currHP",Number(sessionStorage.getItem("maxHP")));
         setTimeout(function() {runTypeAnimation("GeoKnight has defeated the enemies!")},1200);
         setTimeout(function() {runEndFadeAnimation("../choice_page/categories.html")},4000);
     }
