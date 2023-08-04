@@ -44,8 +44,8 @@ submitBtn.addEventListener("click", (event) => {
             if (isCorrect) {
                 // let option = `#option${selectedAnswer.slice(-1)}`;
                 // button = document.getElementById(option);
-                window.alert('Correct!');
                 addToScore();
+                window.alert('Correct!');
                 updateStat("currHP",8);
             } else {
                 window.alert('Wrong answer!');

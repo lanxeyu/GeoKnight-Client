@@ -44,6 +44,7 @@ submitBtn.addEventListener("click", (event) => {
             if (isCorrect) {
                 addToScore()
                 updateStat("maxHP",4);
+                updateStat("currHP",4);
                 window.alert('Correct!');
             } else {
                 window.alert('Wrong answer!');
