@@ -6,5 +6,5 @@ document.getElementById("start").addEventListener("click",() => {
 })
 
 document.getElementById("scoreboard").addEventListener("click",()=>{
-    location.href = "./final_score_page/index.html";
+    location.href = "./scoreboard/index.html";
 })
