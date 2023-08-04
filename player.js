@@ -1,6 +1,6 @@
 function createPlayerInStorage(){
-    sessionStorage.setItem("maxHP",10);
-    sessionStorage.setItem("currHP",10);
+    sessionStorage.setItem("maxHP",30);
+    sessionStorage.setItem("currHP",30);
     sessionStorage.setItem("attack",5);
     sessionStorage.setItem("difficulty",0);
     sessionStorage.setItem("loop",0);
