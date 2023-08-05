@@ -1,11 +1,10 @@
 function createPlayerInStorage(){
-    sessionStorage.setItem("maxHP",10);
-    sessionStorage.setItem("currHP",10);
+    sessionStorage.setItem("maxHP",30);
+    sessionStorage.setItem("currHP",30);
     sessionStorage.setItem("attack",5);
     sessionStorage.setItem("difficulty",0);
     sessionStorage.setItem("loop",0);
     sessionStorage.setItem("score",0);
-    console.log(sessionStorage.getItem("difficulty"))
 }
 
 function showSessionStorage(){
@@ -14,6 +13,7 @@ function showSessionStorage(){
     console.log(sessionStorage.getItem("attack"))
     console.log(sessionStorage.getItem("difficulty"))
     console.log(sessionStorage.getItem("loop"))
+    console.log(sessionStorage.getItem("score"))
 }
 
 function updateLoop(){
@@ -42,8 +42,18 @@ function updateStat(stat,increment){
         if(Number(sessionStorage.getItem("maxHP")) < playerStat){
             playerStat = sessionStorage.getItem("maxHP");
         }
+    }else if(stat === "maxHP"){
+        //increasing maxhp
+        playerStat = Number(sessionStorage.getItem(stat))+increment;
+        //increasing currhp
+        sessionStorage.setItem("currHP",Number(sessionStorage.getItem("currHP"))+4)
     }
+
     sessionStorage.setItem(stat,playerStat);
 }
 
-export {createPlayerInStorage,updateLoop,showSessionStorage,resetLoop,increaseDifficulty,addToScore,updateStat};
+function resolvePlayerStat(stat,value){
+    sessionStorage.setItem(stat,value)
+}
+
+export {resolvePlayerStat,createPlayerInStorage,updateLoop,showSessionStorage,resetLoop,increaseDifficulty,addToScore,updateStat};

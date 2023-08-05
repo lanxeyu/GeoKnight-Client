@@ -22,5 +22,5 @@ Put the pieces of the world back together while fending off enemies for as long 
 })
 
 document.getElementById("scoreboard").addEventListener("click",()=>{
-    location.href = "./final_score_page/index.html";
+    location.href = "./scoreboard/index.html";
 })

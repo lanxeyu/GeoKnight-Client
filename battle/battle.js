@@ -13,7 +13,7 @@ import {renderHPStat,
     runEndFadeAnimation,
     renderScore} from "./battle_rendering.js";
 
-import {addToScore} from "../player.js";
+import {addToScore, resolvePlayerStat} from "../player.js";
 
 // Initialize difficulty scalers
 let battleCounter = Number(sessionStorage.getItem("difficulty"));
@@ -90,8 +90,6 @@ document.getElementById("attack-btn").addEventListener("click", () => {
     renderHP(player);
 
     if (checkZeroHP(player)) {
-        // player = null;
-        console.log(sessionStorage.getItem("score"))
         runDeathAnimation(playerElement)
         setTimeout(function() {runTypeAnimation("GeoKnight has, uh, fainted! Indefinitely!")},1200);
         setTimeout(function() {runEndFadeAnimation("../final_score_page/index.html")},4000);
@@ -109,7 +107,7 @@ document.getElementById("attack-btn").addEventListener("click", () => {
         // If there are no more enemies
     if (enemyArray.length <= 0) {
         addToScore();
-        sessionStorage.setItem("currHP",Number(sessionStorage.getItem("maxHP")));
+        resolvePlayerStat("currHP",sessionStorage.getItem("currHP"))
         setTimeout(function() {runTypeAnimation("GeoKnight has defeated the enemies!")},1200);
         setTimeout(function() {runEndFadeAnimation("../choice_page/categories.html")},4000);
     }
@@ -124,6 +122,7 @@ addEventListener("load",(event) => {
         transitionElement.style.display = "none";
     })
     renderScore();
+    renderHP(player);
 })
 
 initBattlePhase();
