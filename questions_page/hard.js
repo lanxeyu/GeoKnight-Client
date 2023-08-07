@@ -9,7 +9,7 @@ function displayHardQuestion () {
     const option2 = document.querySelector('#option2')
     const option3 = document.querySelector('#option3')
     const option4 = document.querySelector('#option4')
-    fetch ('https://geoknightbackend.onrender.com/levels/hard/random')
+    fetch ('http://localhost:3000/levels/hard/random')
     .then (resp => resp.json())
     .then (data => {
         questionData = data;

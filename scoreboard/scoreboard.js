@@ -9,7 +9,7 @@ const addScore = (data) => {
 }
 
 function displayScoreboard() {
-    fetch("https://geoknightbackend.onrender.com/scoreboard")
+    fetch("http://localhost:3000/scoreboard")
         .then(resp => resp.json())
         .then(data => {
             data.forEach(score => {
